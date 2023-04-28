@@ -25,5 +25,8 @@ class Auditar(actions.Action):
         model = 'auditoria.itemauditoria'
         fields = 'evidencias', 'parecer', 'anexos'
 
+    def view(self):
+        self.info(self.instance.item.descricao)
+
     def submit(self):
         super().submit()
